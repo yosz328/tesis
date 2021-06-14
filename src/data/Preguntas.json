@@ -1,0 +1,17 @@
+{
+    "preguntas": {
+        "0": {
+            "pregunta":"que animal es mas feo",
+            "respuesta": "tu ano"
+        },
+        "1": {
+            "pregunta":"que animal es mas feo",
+            "respuesta": "tu titi"
+        },
+        "2": {
+            "pregunta":"que animal es mas feo",
+            "respuesta": "tu caca"
+        }
+
+    }
+}

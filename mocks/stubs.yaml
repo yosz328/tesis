@@ -1,0 +1,10 @@
+- request:
+    method: GET
+    url: ^/dev/preguntas
+
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    latency: 1000
+    file: get_preguntas.json
