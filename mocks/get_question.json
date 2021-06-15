@@ -1,0 +1,25 @@
+{
+    "titulo":"¿Que Animal Soy?",
+    "preguntas": {
+        "0": {
+            "Animal":"Jirafa",
+            "Error1": "Elefante",
+            "Error2": "Pinguino",
+            "Error3": "Leopardo"
+            
+        },
+        "1": {
+            "Animal":"Leon",
+            "Error1": "Lobo",
+            "Error2": "Oveja",
+            "Error3": "Anguila"
+        },
+        "2": {
+            "Animal":"Aguila",
+            "Error1": "Abeja",
+            "Error2": "Rinoceronte",
+            "Error3": "Paloma"
+        }
+
+    }
+}

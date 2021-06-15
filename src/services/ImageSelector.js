@@ -3,7 +3,6 @@
 
 export const ImageSelector = (nombre) => {
     let image = '';
-    console.log(nombre);
     switch(nombre){
         
         case 'Jirafa':
@@ -18,6 +17,5 @@ export const ImageSelector = (nombre) => {
         default:
             break;
     }
-    console.log(image);
     return image;
 }

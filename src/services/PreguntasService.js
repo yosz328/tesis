@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-const url = 'http://localhost:3000';
+const url = 'http://localhost:9000';
 
 export const getPreguntas = () => {
     return Axios.get(url + '/dev/preguntas')

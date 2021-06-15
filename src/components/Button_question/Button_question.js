@@ -14,8 +14,6 @@ const ButtonsWrapper = styled.form`
     margin-right: 100px;
     
 `;
-
-
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -49,7 +47,6 @@ function shuffle(array) {
   }
   var arr = [2, 11, 37, 42];
     shuffle(arr);
-    console.log(arr);
   // Used like so
 
 

@@ -8,3 +8,25 @@
     status: 200
     latency: 1000
     file: get_preguntas.json
+
+- request:
+    method: GET
+    url: ^/dev/question
+  
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    latency: 1000
+    file: get_question.json
+  
+- request:
+    method: GET
+    url: ^/dev/tarjeta
+  
+  response:
+    headers:
+      content-type: application/json
+    status: 200
+    latency: 1000
+    file: get_tarjeta.json

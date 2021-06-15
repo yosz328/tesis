@@ -1,0 +1,111 @@
+{
+    "response_code":0,
+    "results":[
+       {
+          "category":"General Knowledge",
+          "type":"boolean",
+          "difficulty":"easy",
+          "question":"Video streaming website YouTube was purchased in it&#039;s entirety by Facebook for US$1.65 billion in stock.",
+          "correct_answer":"False",
+          "incorrect_answers":[
+             "True"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"boolean",
+          "difficulty":"medium",
+          "question":"The US emergency hotline is 911 because of the September 11th terrorist attacks.",
+          "correct_answer":"False",
+          "incorrect_answers":[
+             "True"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"boolean",
+          "difficulty":"medium",
+          "question":"The sum of all the numbers on a roulette wheel is 666.",
+          "correct_answer":"True",
+          "incorrect_answers":[
+             "False"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"boolean",
+          "difficulty":"medium",
+          "question":"You are allowed to sell your soul on eBay.",
+          "correct_answer":"False",
+          "incorrect_answers":[
+             "True"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"boolean",
+          "difficulty":"easy",
+          "question":"Pluto is a planet.",
+          "correct_answer":"False",
+          "incorrect_answers":[
+             "True"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"boolean",
+          "difficulty":"easy",
+          "question":"Romanian belongs to the Romance language family, shared with French, Spanish, Portuguese and Italian. ",
+          "correct_answer":"True",
+          "incorrect_answers":[
+             "False"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"multiple",
+          "difficulty":"medium",
+          "question":"Who invented Pastafarianism?",
+          "correct_answer":"Bobby Henderson",
+          "incorrect_answers":[
+             "Eric Tignor",
+             "Bill Nye",
+             "Zach Soldi"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"multiple",
+          "difficulty":"medium",
+          "question":"What is real haggis made of?",
+          "correct_answer":"Sheep&#039;s Heart, Liver and Lungs",
+          "incorrect_answers":[
+             "Sheep&#039;s Heart, Kidneys and Lungs",
+             "Sheep&#039;s Liver, Kidneys and Eyes",
+             "Whole Sheep"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"boolean",
+          "difficulty":"easy",
+          "question":"Scotland voted to become an independent country during the referendum from September 2014.",
+          "correct_answer":"False",
+          "incorrect_answers":[
+             "True"
+          ]
+       },
+       {
+          "category":"General Knowledge",
+          "type":"multiple",
+          "difficulty":"easy",
+          "question":"When someone is cowardly, they are said to have what color belly?",
+          "correct_answer":"Yellow",
+          "incorrect_answers":[
+             "Green",
+             "Red",
+             "Blue"
+          ]
+       }
+    ]
+ }

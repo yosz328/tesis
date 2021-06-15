@@ -31,13 +31,11 @@ function Tarjetas() {
   function handleSubmit(e) {
     e.preventDefault()
     axios
-    .get('https://my-json-server.typicode.com/yosz328/json-tarjetas/db', {
-      params: {
-        amount: amountEl.current.value,
-        category: categoryEl.current.value
-      }
+    .get('http://localhost:9000/dev/tarjeta', {
+     
     })
     .then(res => {
+      console.log(res);
       setFlashcards(res.data.results.map((questionItem, index) => {
         const answer = decodeString(questionItem.correct_answer)
         const options = [
@@ -57,18 +55,6 @@ function Tarjetas() {
   return (
     <>
       <form className="header" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="category">Category</label>
-          <select id="category" ref={categoryEl}>
-            {categories.map(category => {
-              return <option value={category.id} key={category.id}>{category.name}</option>
-            })}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="amount">Number of Questions</label>
-          <input type="number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl} />
-        </div>
         <div className="form-group">
           <button className="btn">Generate</button>
         </div>

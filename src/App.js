@@ -11,6 +11,7 @@ import Card from "./components/Card"
 import Home from "./containers/Home"
 import QuienSoy from "./containers/QuienSoy"
 import Tarjetas from "./containers/Tarjetas/Tarjetas";
+import Matematicas from "./containers/Matematicas";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -34,6 +35,14 @@ const FormWrapper = styled.div`
 `;
 
 const TitleText = styled.h2`
+  left: 0;
+  right: 0;
+  justify-contint: center;
+  text-align: center;
+  color: rgb(0,0,0) !important;
+  padding: 0;
+`;
+const SubTitleText = styled.h3`
   left: 0;
   right: 0;
   justify-contint: center;
@@ -65,6 +74,11 @@ export default function BasicExample() {
             <StyledLink to="/Tarjetas">Tarjetas</StyledLink>
           </li>
         </ul>
+        <ul>
+          <li>
+            <StyledLink to="/Matematicas">Matematicas</StyledLink>
+          </li>
+        </ul>
 
         <hr />
 
@@ -88,6 +102,9 @@ export default function BasicExample() {
           <Route path="/tarjetas">
             <Tarjetas_router/>
           </Route>
+          <Route path="/matematicas">
+            <Matematicas_router/>
+          </Route>
         </Switch>
       </div>
     </Router>
@@ -101,7 +118,10 @@ function Home_router() {
   return (
     <div>
       <FormWrapper>
-        <Card><TitleText>Dashboard</TitleText></Card>
+        <Card>
+          <TitleText>Bienvenido!!!</TitleText>
+          <SubTitleText>Como Estas?? Dime Tu nombre :D</SubTitleText>
+        </Card>
       </FormWrapper>
     </div>
   );
@@ -119,6 +139,14 @@ function Tarjetas_router() {
   return (
     <div>
       <Tarjetas/>
+    </div>
+  );
+}
+
+function Matematicas_router() {
+  return (
+    <div>
+      <Matematicas/>
     </div>
   );
 }
