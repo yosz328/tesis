@@ -18,12 +18,14 @@ const FormWrapper = styled.div`
   zoom: 1;
 `;
 const CenterCard = styled(Card)`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    margin: auto;
-    min-height: 100px
+    background: rgba(55, 156, 200);
+    border-style: groove;
+
+`;
+const TableCard = styled(Card)`
+    background: rgba(55, 156, 200);
+    border-style: groove;
+    justify-content: center;
 
 
 `;
@@ -31,7 +33,7 @@ const CenterCard = styled(Card)`
 const TitleText = styled.h2`
   left: 0;
   right: 0;
-  justify-contint: center;
+  justify-content: center;
   text-align: center;
   color: rgb(0,0,0) !important;
   padding: 0;
@@ -58,6 +60,13 @@ const FormularioWrapper = styled.form`
     display: flex;
     flex-direction: column;
 `;
+
+const TablaOrder = styled.table`
+align-items: center;
+justify-content: center;
+margin-left: 180px;
+`;
+
 
 class Home extends Component {
     constructor(props){
@@ -111,11 +120,11 @@ class Home extends Component {
         let puntaje_quiensoy = localStorage.getItem('puntaje_quiensoy') ?  Number(localStorage.getItem('puntaje_quiensoy')) : 0;
         let puntaje_Mayor = localStorage.getItem('puntaje_mateMayor') ?  Number(localStorage.getItem('puntaje_mateMayor')) : 0;
         let puntaje_Menor = localStorage.getItem('puntaje_mateMenor') ?  Number(localStorage.getItem('puntaje_mateMenor')) : 0;
-        
+
         return(
             <FormWrapper>
 
-                <Card>
+                <CenterCard>
                     {
 
                     this.state.nombre == '' &&
@@ -137,11 +146,11 @@ class Home extends Component {
                             </React.Fragment>
                         }
                         </ButtonWrapper>
-            </Card>
+            </CenterCard>
         { 
         this.state.correcto &&
-        <Card>
-          <table >
+        <TableCard>
+          <TablaOrder >
             <tr>
               <RowHead>Actividad</RowHead>
               <RowHead>Puntaje</RowHead>
@@ -158,8 +167,8 @@ class Home extends Component {
               <Row>Matematicas Menor</Row>
               <Row> {puntaje_Menor} pts</Row>
             </tr>
-          </table>
-          </Card>
+          </TablaOrder>
+          </TableCard>
         }
 
                     

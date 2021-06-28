@@ -36,7 +36,9 @@ const CenterCard = styled(Card)`
     align-items: center;
     padding: 10px;
     margin: auto;
-    min-height: 100px
+    min-height: 100px;
+    background: rgba(55, 156, 200);
+    border-style: groove;
 
 
 `;

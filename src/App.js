@@ -55,7 +55,7 @@ const SubTitleText = styled.h3`
 `;
 
 const TopDiv = styled.div`
-  background-color: yellow;
+    background: radial-gradient(circle, #73ff84, #00aae4);
 `;
 
 
@@ -66,6 +66,7 @@ export default function BasicExample() {
   return (
     <Router>
       <body >
+        
         <TopDiv>
           <li>
             <StyledLink to="/">Home</StyledLink>
@@ -108,7 +109,7 @@ export default function BasicExample() {
             <Matematicas_router/>
           </Route>
         </Switch>
-        <footer class="footer"></footer>
+        
       </body>
     </Router>
   );

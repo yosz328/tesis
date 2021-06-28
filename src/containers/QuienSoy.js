@@ -22,6 +22,8 @@ const CenterCard = styled(Card)`
 display: flex;
 flex-direction: column;
 align-items: center;
+background: rgba(55, 156, 200);
+border-style: groove;
 
 `;
 const TitleText = styled.h2`

@@ -1,6 +1,9 @@
 body {
-    background-color: green;
-    background-image: url(https://github.com/yosz328/tesis/blob/main/src/images/img.png);
+    
+    
+    background-image: url(https://i.pinimg.com/originals/79/23/18/7923187da444d11c007bcccf244fa03e.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
   }
 
