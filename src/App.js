@@ -11,7 +11,9 @@ import Card from "./components/Card"
 import Home from "./containers/Home"
 import QuienSoy from "./containers/QuienSoy"
 import Tarjetas from "./containers/Tarjetas/Tarjetas";
-import Matematicas from "./containers/Matematicas";
+import Matematicas from "./containers/Matematicas/Matematicas";
+import TextField from '@material-ui/core/TextField';
+import  Button  from "./components/Button/index";
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -24,6 +26,7 @@ import Matematicas from "./containers/Matematicas";
 
 const StyledLink = styled(Link)`
   font-size: 32px;
+  font-family: arvo;
 `;
 
 const FormWrapper = styled.div`
@@ -51,35 +54,36 @@ const SubTitleText = styled.h3`
   padding: 0;
 `;
 
+const TopDiv = styled.div`
+  background-color: yellow;
+`;
+
+
 
 
 
 export default function BasicExample() {
   return (
     <Router>
-      <div>
-        <ul>
+      <body >
+        <TopDiv>
           <li>
             <StyledLink to="/">Home</StyledLink>
           </li>
           <li>
             <StyledLink to="/QuienSoy">Quien Soy</StyledLink>
           </li>
-          <li>
-            <StyledLink to="/preguntas">Preguntas</StyledLink>
-          </li>
-        </ul>
-        <ul>
+        
+        
           <li>
             <StyledLink to="/Tarjetas">Tarjetas</StyledLink>
           </li>
-        </ul>
-        <ul>
+        
+        
           <li>
             <StyledLink to="/Matematicas">Matematicas</StyledLink>
           </li>
-        </ul>
-
+          
         <hr />
 
         {/*
@@ -89,15 +93,13 @@ export default function BasicExample() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
+        </TopDiv>
         <Switch>
           <Route exact path="/">
             <Home_router />
           </Route>
           <Route path="/QuienSoy">
             <QuienSoy_router />
-          </Route>
-          <Route path="/preguntas">
-            <Preguntas />
           </Route>
           <Route path="/tarjetas">
             <Tarjetas_router/>
@@ -106,7 +108,8 @@ export default function BasicExample() {
             <Matematicas_router/>
           </Route>
         </Switch>
-      </div>
+        <footer class="footer"></footer>
+      </body>
     </Router>
   );
 }
@@ -117,12 +120,7 @@ export default function BasicExample() {
 function Home_router() {
   return (
     <div>
-      <FormWrapper>
-        <Card>
-          <TitleText>Bienvenido!!!</TitleText>
-          <SubTitleText>Como Estas?? Dime Tu nombre :D</SubTitleText>
-        </Card>
-      </FormWrapper>
+      <Home/>
     </div>
   );
 }
@@ -147,15 +145,6 @@ function Matematicas_router() {
   return (
     <div>
       <Matematicas/>
-    </div>
-  );
-}
-
-function Preguntas() {
-  return (
-    <div>
-      
-      <Home/>
     </div>
   );
 }

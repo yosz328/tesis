@@ -7,6 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import {getPreguntas} from '../services'
 
 import question from '../data/Preguntas.json'
+import React from "react";
 
 
 const FormWrapper = styled.div`
@@ -16,6 +17,16 @@ const FormWrapper = styled.div`
   margin-bottom: 150;
   zoom: 1;
 `;
+const CenterCard = styled(Card)`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    min-height: 100px
+
+
+`;
 
 const TitleText = styled.h2`
   left: 0;
@@ -24,6 +35,13 @@ const TitleText = styled.h2`
   text-align: center;
   color: rgb(0,0,0) !important;
   padding: 0;
+`;
+
+const RowHead = styled.td`
+    font-weight: 700;
+`;
+const Row = styled.td`
+    
 `;
 
 const ButtonWrapper = styled.div`
@@ -46,12 +64,14 @@ class Home extends Component {
         super(props);
         this.state = {
             message: '',
-            formName: '',
+            textFieldInput: '',
+            nombre: '',
             correcto: false
         };
+        this.doSomethingWithInput = this.doSomethingWithInput.bind(this);
+    this.handleTextFieldChange = this.handleTextFieldChange.bind(this);
     }
-    componentWillMount() {
-        
+    componentDidMount() {
         
         /*getPreguntas()
             .then(result => {             
@@ -63,47 +83,87 @@ class Home extends Component {
             */
     }
     
-    handleSubmit = (event) => {
+    handleTextFieldChange(event) {
         event.preventDefault();
-        
-    
-
-
-    };
-    // handle text input
-    handleInput = (event) => {
         this.setState({
-            formName: event.target.value
-        })
+          textFieldInput: event.target.value,
+        });
+        console.log(this.state.textFieldInput);
+      }
+    // handle text input
+    doSomethingWithInput(event) {
+        event.preventDefault();
+        const {
+            textFieldInput,          
+          } = this.state;
+        // Use textFieldInput
 
-    };
+        if (this.state.textFieldInput != ''){
+            this.setState({correcto: true,nombre: this.state.textFieldInput})
+        }else{
+            
+        }
+        
+      }
 
-    
     render () {
         
+        let puntaje_quiensoy = localStorage.getItem('puntaje_quiensoy') ?  Number(localStorage.getItem('puntaje_quiensoy')) : 0;
+        let puntaje_Mayor = localStorage.getItem('puntaje_mateMayor') ?  Number(localStorage.getItem('puntaje_mateMayor')) : 0;
+        let puntaje_Menor = localStorage.getItem('puntaje_mateMenor') ?  Number(localStorage.getItem('puntaje_mateMenor')) : 0;
         
-        console.log(question.preguntas[0].pregunta);
-   
         return(
             <FormWrapper>
+
                 <Card>
-                    <TitleText>{question.preguntas[0].pregunta}</TitleText>
+                    {
+
+                    this.state.nombre == '' &&
+                    <TitleText>Hola Bienvenido Ingresa tu nombre !!</TitleText>
+                    }{
+                        this.state.nombre != '' &&
+                    <React.Fragment>
+                        <TitleText>Bienvenido {this.state.nombre}!!!</TitleText>
+                        <TitleText>Tu puntaje acumulado es de {puntaje_quiensoy + puntaje_Mayor + puntaje_Menor} puntos </TitleText>
+                    </React.Fragment>
+                    }
                     <ButtonWrapper>
                         {
                             !this.state.correcto &&
                             
-                            <FormularioWrapper onSubmit={this.handleSubmit}>
-                                <TextField  id="outlined-basic" label="Outlined" variant="outlined" onChange={this.handleInput}  />
-                                <Button type="submit" variant="contained" color="primary" > Primary </Button>
-                            </FormularioWrapper>
-                            
+                            <React.Fragment>
+                                <TextField  id="outlined-basic" label="Ingresa tu nombre" variant="outlined" onChange={(e) => this.handleTextFieldChange(e)}  />
+                                <Button type="submit" variant="contained" color="primary" style={{margin: '13px'}} onClick={(e) => this.doSomethingWithInput(e)} > Continuar :D </Button>
+                            </React.Fragment>
                         }
+                        </ButtonWrapper>
+            </Card>
+        { 
+        this.state.correcto &&
+        <Card>
+          <table >
+            <tr>
+              <RowHead>Actividad</RowHead>
+              <RowHead>Puntaje</RowHead>
+            </tr>
+            <tr>
+              <Row>Quien Soy</Row>
+              <Row> {puntaje_quiensoy} pts</Row>
+            </tr>
+            <tr>
+              <Row>Matematicas Mayor</Row>
+              <Row> {puntaje_Mayor} pts</Row>
+            </tr>
+            <tr>
+              <Row>Matematicas Menor</Row>
+              <Row> {puntaje_Menor} pts</Row>
+            </tr>
+          </table>
+          </Card>
+        }
 
-                        <p>32</p> 
-                         <TextField  id="outlined-basic" label="Outlined" variant="outlined" onChange={this.handleInput}  />
-                         <p>69</p>
-                    </ButtonWrapper>
-                </Card>
+                    
+                
             </FormWrapper>
         );
     }

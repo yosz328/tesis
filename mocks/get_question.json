@@ -5,20 +5,23 @@
             "Animal":"Jirafa",
             "Error1": "Elefante",
             "Error2": "Pinguino",
-            "Error3": "Leopardo"
+            "Error3": "Leopardo",
+            "Imagen": "https://proyecto-tesis.s3.amazonaws.com/jirafa.jpg"
             
         },
         "1": {
             "Animal":"Leon",
             "Error1": "Lobo",
             "Error2": "Oveja",
-            "Error3": "Anguila"
+            "Error3": "Anguila",
+            "Imagen": "https://proyecto-tesis.s3.amazonaws.com/leon.jpg"
         },
         "2": {
             "Animal":"Aguila",
             "Error1": "Abeja",
             "Error2": "Rinoceronte",
-            "Error3": "Paloma"
+            "Error3": "Paloma",
+            "Imagen": "https://proyecto-tesis.s3.amazonaws.com/aguila.jpg"
         }
 
     }

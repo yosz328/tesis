@@ -5,22 +5,9 @@ import axios from 'axios'
 
 function Tarjetas() {
   const [flashcards, setFlashcards] = useState([])
-  const [categories, setCategories] = useState([])
 
-  const categoryEl = useRef()
-  const amountEl = useRef()
 
-  useEffect(() => {
-    axios
-      .get('https://opentdb.com/api_category.php')
-      .then(res => {
-        setCategories(res.data.trivia_categories)
-      })
-  }, [])
 
-  useEffect(() => {
-   
-  }, [])
 
   function decodeString(str) {
     const textArea = document.createElement('textarea')
@@ -54,13 +41,15 @@ function Tarjetas() {
 
   return (
     <>
+      <div className="blank">
       <form className="header" onSubmit={handleSubmit}>
         <div className="form-group">
-          <button className="btn">Generate</button>
+          <button className="btn">Obtener Tarjetas</button>
         </div>
       </form>
       <div className="container">
         <FlashcardList flashcards={flashcards} />
+      </div>
       </div>
     </>
   );

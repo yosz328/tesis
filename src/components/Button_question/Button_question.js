@@ -5,13 +5,8 @@ import styled from "styled-components";
 import {ImageSelector} from '../../services'
 
 
-const ButtonsWrapper = styled.form`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1rem;
-    margin-left: 100px;
-    margin-right: 100px;
+const ButtonsWrapper = styled.div`
+
     
 `;
 const Wrapper = styled.div`
@@ -45,8 +40,7 @@ function shuffle(array) {
   
     return array;
   }
-  var arr = [2, 11, 37, 42];
-    shuffle(arr);
+
   // Used like so
 
 
@@ -57,19 +51,19 @@ const Button_question = ({pregunta1, pregunta2, pregunta3, pregunta4, imagen, on
     pregunta_array.push(pregunta3)
     pregunta_array.push(pregunta4)
     shuffle(pregunta_array);
-    let image = ImageSelector(imagen)
+   
+    
 
     return (
-
                         <Wrapper>
-                            <Imagen src={image} ></Imagen>
+                            <Imagen src={imagen} ></Imagen>
                             <ButtonsWrapper>
-                                <Button  variant="contained" color="primary" onClick={onClick} > {pregunta_array[0]} </Button>
-                                <Button  variant="contained" color="primary" onClick={onClick} > {pregunta_array[1]} </Button>
+                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}} shadow={true} onClick={onClick} > {pregunta_array[0]} </Button>
+                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}} shadow={true} onClick={onClick} > {pregunta_array[1]} </Button>
                             </ButtonsWrapper>
                             <ButtonsWrapper>
-                                <Button  variant="contained" color="primary" onClick={onClick} > {pregunta_array[2]} </Button>
-                                <Button  variant="contained" color="primary" onClick={onClick} > {pregunta_array[3]}</Button>
+                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}} shadow={true} onClick={onClick} > {pregunta_array[2]} </Button>
+                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}} shadow={true} onClick={onClick} > {pregunta_array[3]}</Button>
                             </ButtonsWrapper>
                         </Wrapper>
     );

@@ -1,6 +1,14 @@
 body {
-    background-color: #C8D0D2;
+    background-color: green;
+    background-image: url(https://github.com/yosz328/tesis/blob/main/src/images/img.png);
     margin: 0;
+  }
+
+
+  .blank {
+    background-color: aliceblue;
+    padding: 1em ;
+    
   }
   
   .container {
@@ -56,8 +64,8 @@ body {
     align-items: center;
     position: relative;
     border-radius: .25rem;
+    
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
-    background-color: white;
     transform-style: preserve-3d;
     transition: 150ms;
     cursor: pointer;
@@ -71,6 +79,7 @@ body {
   
   .card.flip {
     --rotate-y: 180deg;
+    
   }
   
   .card .front {

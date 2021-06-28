@@ -14,6 +14,7 @@ const Button = styled.button`
     display: inline-block;
     outline: none;
     cursor: pointer;
+    min-width: 110px;
     -webkit-tap-highlight-color: transparent;
     -webkit-transition: -webkit-transform 150ms ease-out;
     -webkit-transition: transform 150ms ease-out;

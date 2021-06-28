@@ -2,7 +2,7 @@ import react, {Component} from "react";
 import styled from "styled-components";
 import Card from "../components/Card";
 import Button_question from "../components/Button_question/Button_question"
-//import Button from "../components/Button"
+import Button from "../components/Button/index"
 
 import {getQuestion} from '../services'
 
@@ -93,18 +93,20 @@ class QuienSoy extends Component {
             this.setState({
                 puntaje: puntos,
                 finalizado: true
-             })      
+             },() => { localStorage.setItem('puntaje_quiensoy',this.state.puntaje) })
+                  
         }else{
             this.setState({
                 correcta: JSON.parse(localStorage.getItem('question')).preguntas[numero].Animal,
                 error1: JSON.parse(localStorage.getItem('question')).preguntas[numero].Error1,
                 error2: JSON.parse(localStorage.getItem('question')).preguntas[numero].Error2,
                 error3: JSON.parse(localStorage.getItem('question')).preguntas[numero].Error3,
+                imagen: JSON.parse(localStorage.getItem('question')).preguntas[numero].Imagen,
                 nroQuestion: numero,
                 })         
         }};
 
-    componentWillMount() {     
+    componentWillMount() {    
         getQuestion()
             .then(result => {
                 let aux = JSON.stringify(result.data);
@@ -137,9 +139,14 @@ class QuienSoy extends Component {
             this.cambioQuestion(this.state.nroQuestion + 1)
         }   
     }
+
+     refreshPage = ()=>{
+        window.location.reload();
+     }
     
     render () {
         var a =JSON.parse(localStorage.getItem('question')).titulo;
+        console.log(this.state);
         return(
             <React.Fragment>        
             {
@@ -154,16 +161,19 @@ class QuienSoy extends Component {
                             pregunta2={this.state.error1} 
                             pregunta3={this.state.error2} 
                             pregunta4={this.state.error3} 
-                            imagen={this.state.correcta} 
+                            imagen={this.state.imagen} 
                             onClick={this.onClick}                    
                         />              
                 </CenterCard>
                 }
+
                 {
                     this.state.finalizado &&
                     <CenterCard>
                         <TitleText>Tu puntaje es</TitleText>
-                        <TitleText>{this.state.puntaje}</TitleText>    
+                        <TitleText>{this.state.puntaje}</TitleText>  
+                        <TitleText>¿Quiere volver a intentarlo?</TitleText>   
+                        <Button shadow={true} onClick={this.refreshPage}> Reintentar</Button>   
                     </CenterCard>
                 }
             </FormWrapper>
