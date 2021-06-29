@@ -28,6 +28,7 @@ const TitleText = styled.h2`
   color: rgb(0,0,0) !important;
   padding: 0;
   margin: auto;
+  font-family: rubik;
 `;
 
 const CenterCard = styled(Card)`
@@ -99,6 +100,7 @@ class Matematicas extends Component {
                 return(
 
                     <React.Fragment>
+                        <div>
                         {
                         !this.state.showMayor && !this.state.showMenor 
                             &&
@@ -117,7 +119,7 @@ class Matematicas extends Component {
                     {
                     this.state.showMayor
                         &&
-                    <Mayor cantidad={10} onBack={(puntaje) => {
+                    <Mayor cantidad={1} onBack={(puntaje) => {
                         this.setState({puntajeMayor: Number(puntaje)+ Number(this.state.puntajeMayor),
                             showMayor: false},
                             () => {
@@ -130,13 +132,14 @@ class Matematicas extends Component {
                     {
                     this.state.showMenor
                         &&
-                    <Menor cantidad={10} onBack={(puntaje) => {
+                    <Menor cantidad={1} onBack={(puntaje) => {
                         this.setState({puntajeMenor: Number(puntaje)+ Number(this.state.puntajeMenor),
                             showMenor: false}, () => {
                                 this.updatepuntajeMenor(Number(puntaje))
                             })
                   }}/> 
-                  }               
+                  }    
+                  </div>           
                  </React.Fragment>
             )}
 

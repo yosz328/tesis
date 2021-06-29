@@ -52,6 +52,7 @@ text-align: center;
 color: rgb(0,0,0) !important;
 padding: 0;
 margin: auto;
+font-family: rubik;
 `;
 
 const AnswerText = styled.h3`
@@ -62,6 +63,7 @@ text-align: center;
 color: ${props =>  props.color  || 'rgb(255, 255, 255)'};
 padding: 0;
 margin: auto;
+font-family: rubik;
 `;
 
 
@@ -79,8 +81,8 @@ class Menor extends Component {
     constructor(props){
         super(props);
         this.state = {
-            valor1: Math.floor(Math.random() * 100) + 1,
-            valor2: Math.floor(Math.random() * 100) + 1,
+            valor1: Math.floor(Math.random() * 500) + 1,
+            valor2: Math.floor(Math.random() * 500) + 1,
             respuesta: '',
             puntaje: 0,
             correcta: false,
@@ -116,8 +118,8 @@ class Menor extends Component {
                         color: '#ffffff',
                         respuesta: '',
                         correcta: false,
-                        valor1: Math.floor(Math.random() * 100) + 1,
-                        valor2: Math.floor(Math.random() * 100) + 1,
+                        valor1: Math.floor(Math.random() * 500) + 1,
+                        valor2: Math.floor(Math.random() * 500) + 1,
                         value:'',
                         cantidad: this.state.cantidad-1,
                         puntaje: this.state.puntaje + 1
@@ -134,8 +136,8 @@ class Menor extends Component {
                         color: '#ffffff',
                         respuesta: '',
                         correcta: false,
-                        valor1: Math.floor(Math.random() * 100) + 1,
-                        valor2: Math.floor(Math.random() * 100) + 1,
+                        valor1: Math.floor(Math.random() * 500) + 1,
+                        valor2: Math.floor(Math.random() * 500) + 1,
                         value:'',
                         cantidad: this.state.cantidad-1,
                         vidas: this.state.vidas-1
@@ -154,8 +156,8 @@ class Menor extends Component {
                         color: '#ffffff',
                         respuesta: '',
                         correcta: false,
-                        valor1: Math.floor(Math.random() * 100) + 1,
-                        valor2: Math.floor(Math.random() * 100) + 1,
+                        valor1: Math.floor(Math.random() * 500) + 1,
+                        valor2: Math.floor(Math.random() * 500) + 1,
                         value:'',
                         cantidad: this.state.cantidad-1,
                         puntaje: this.state.puntaje + 1
@@ -170,8 +172,8 @@ class Menor extends Component {
                         color: '#ffffff',
                         respuesta: '',
                         correcta: false,
-                        valor1: Math.floor(Math.random() * 100) + 1,
-                        valor2: Math.floor(Math.random() * 100) + 1,
+                        valor1: Math.floor(Math.random() * 500) + 1,
+                        valor2: Math.floor(Math.random() * 500) + 1,
                         value:'',
                         cantidad: this.state.cantidad-1,
                         vidas: this.state.vidas-1,

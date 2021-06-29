@@ -58,12 +58,12 @@ const Button_question = ({pregunta1, pregunta2, pregunta3, pregunta4, imagen, on
                         <Wrapper>
                             <Imagen src={imagen} ></Imagen>
                             <ButtonsWrapper>
-                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}} shadow={true} onClick={onClick} > {pregunta_array[0]} </Button>
-                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}} shadow={true} onClick={onClick} > {pregunta_array[1]} </Button>
+                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}}  onClick={onClick} > {pregunta_array[0]} </Button>
+                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}}  onClick={onClick} > {pregunta_array[1]} </Button>
                             </ButtonsWrapper>
                             <ButtonsWrapper>
-                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}} shadow={true} onClick={onClick} > {pregunta_array[2]} </Button>
-                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}} shadow={true} onClick={onClick} > {pregunta_array[3]}</Button>
+                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}}  onClick={onClick} > {pregunta_array[2]} </Button>
+                                <Button  variant="contained" color="primary" size="medium" style={{ margin: '10px'}}  onClick={onClick} > {pregunta_array[3]}</Button>
                             </ButtonsWrapper>
                         </Wrapper>
     );

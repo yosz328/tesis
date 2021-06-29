@@ -14,6 +14,11 @@ import Tarjetas from "./containers/Tarjetas/Tarjetas";
 import Matematicas from "./containers/Matematicas/Matematicas";
 import TextField from '@material-ui/core/TextField';
 import  Button  from "./components/Button/index";
+import HomeTwoToneIcon from '@material-ui/icons/HomeTwoTone';
+import HelpTwoToneIcon from '@material-ui/icons/HelpTwoTone';
+import DashboardTwoToneIcon from '@material-ui/icons/DashboardTwoTone';
+import ArrowBackIosTwoToneIcon from '@material-ui/icons/ArrowBackIosTwoTone';
+import ArrowForwardIosTwoToneIcon from '@material-ui/icons/ArrowForwardIosTwoTone';
 
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
@@ -26,7 +31,8 @@ import  Button  from "./components/Button/index";
 
 const StyledLink = styled(Link)`
   font-size: 32px;
-  font-family: arvo;
+  font-family: rubik;
+
 `;
 
 const FormWrapper = styled.div`
@@ -44,6 +50,7 @@ const TitleText = styled.h2`
   text-align: center;
   color: rgb(0,0,0) !important;
   padding: 0;
+  font-family: rubik;
 `;
 const SubTitleText = styled.h3`
   left: 0;
@@ -52,10 +59,13 @@ const SubTitleText = styled.h3`
   text-align: center;
   color: rgb(0,0,0) !important;
   padding: 0;
+  font-family: rubik;
 `;
 
 const TopDiv = styled.div`
     background: radial-gradient(circle, #73ff84, #00aae4);
+    display: flex;
+    align-content: center
 `;
 
 
@@ -70,19 +80,24 @@ export default function BasicExample() {
         <TopDiv>
           <li>
             <StyledLink to="/">Home</StyledLink>
+            <HomeTwoToneIcon/>
           </li>
           <li>
             <StyledLink to="/QuienSoy">Quien Soy</StyledLink>
+            <HelpTwoToneIcon/>
           </li>
         
         
           <li>
             <StyledLink to="/Tarjetas">Tarjetas</StyledLink>
+            <DashboardTwoToneIcon/>
           </li>
         
         
           <li>
+            <ArrowBackIosTwoToneIcon/>
             <StyledLink to="/Matematicas">Matematicas</StyledLink>
+            <ArrowForwardIosTwoToneIcon/>
           </li>
           
         <hr />

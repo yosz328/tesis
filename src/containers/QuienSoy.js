@@ -5,6 +5,7 @@ import Button_question from "../components/Button_question/Button_question"
 import Button from "../components/Button/index"
 
 import {getQuestion} from '../services'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 import loading from "../images/Loading.gif"
@@ -33,6 +34,7 @@ const TitleText = styled.h2`
   text-align: center;
   color: rgb(0,0,0) !important;
   padding: 0;
+  font-family: rubik;
 `;
 const ButtonWrapper = styled.div`
   padding: 8px;
@@ -183,7 +185,7 @@ class QuienSoy extends Component {
         {
           this.state.correcta == '' &&
             <FormWrapper>
-                <Imagen src={loading}/> 
+                <CircularProgress/> 
             </FormWrapper>
         }
         </React.Fragment>

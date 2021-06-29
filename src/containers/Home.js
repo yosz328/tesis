@@ -37,13 +37,15 @@ const TitleText = styled.h2`
   text-align: center;
   color: rgb(0,0,0) !important;
   padding: 0;
+  font-family: rubik;
 `;
 
 const RowHead = styled.td`
     font-weight: 700;
+    font-family: rubik;
 `;
 const Row = styled.td`
-    
+font-family: rubik;
 `;
 
 const ButtonWrapper = styled.div`
