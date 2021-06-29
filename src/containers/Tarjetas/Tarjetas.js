@@ -18,7 +18,7 @@ function Tarjetas() {
   function handleSubmit(e) {
     e.preventDefault()
     axios
-    .get('http://localhost:9000/dev/tarjeta', {
+    .get('https://mcafye3c94.execute-api.us-east-1.amazonaws.com/getTarjetas', {
      
     })
     .then(res => {
