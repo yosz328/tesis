@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tesis/static/css/main.cb414b98.chunk.css",
+    "main.js": "/tesis/static/js/main.c37f81a6.chunk.js",
+    "main.js.map": "/tesis/static/js/main.c37f81a6.chunk.js.map",
+    "runtime-main.js": "/tesis/static/js/runtime-main.5552f6aa.js",
+    "runtime-main.js.map": "/tesis/static/js/runtime-main.5552f6aa.js.map",
+    "static/js/2.e860d02c.chunk.js": "/tesis/static/js/2.e860d02c.chunk.js",
+    "static/js/2.e860d02c.chunk.js.map": "/tesis/static/js/2.e860d02c.chunk.js.map",
+    "static/js/3.86dfd5b8.chunk.js": "/tesis/static/js/3.86dfd5b8.chunk.js",
+    "static/js/3.86dfd5b8.chunk.js.map": "/tesis/static/js/3.86dfd5b8.chunk.js.map",
+    "index.html": "/tesis/index.html",
+    "static/css/main.cb414b98.chunk.css.map": "/tesis/static/css/main.cb414b98.chunk.css.map",
+    "static/js/2.e860d02c.chunk.js.LICENSE.txt": "/tesis/static/js/2.e860d02c.chunk.js.LICENSE.txt",
+    "static/media/Loading.63d7da1b.gif": "/tesis/static/media/Loading.63d7da1b.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5552f6aa.js",
+    "static/js/2.e860d02c.chunk.js",
+    "static/css/main.cb414b98.chunk.css",
+    "static/js/main.c37f81a6.chunk.js"
+  ]
+}
