@@ -119,7 +119,7 @@ class Matematicas extends Component {
                     {
                     this.state.showMayor
                         &&
-                    <Mayor cantidad={1} onBack={(puntaje) => {
+                    <Mayor cantidad={10} onBack={(puntaje) => {
                         this.setState({puntajeMayor: Number(puntaje)+ Number(this.state.puntajeMayor),
                             showMayor: false},
                             () => {
@@ -132,7 +132,7 @@ class Matematicas extends Component {
                     {
                     this.state.showMenor
                         &&
-                    <Menor cantidad={1} onBack={(puntaje) => {
+                    <Menor cantidad={10} onBack={(puntaje) => {
                         this.setState({puntajeMenor: Number(puntaje)+ Number(this.state.puntajeMenor),
                             showMenor: false}, () => {
                                 this.updatepuntajeMenor(Number(puntaje))
