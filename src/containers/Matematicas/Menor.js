@@ -200,10 +200,14 @@ class Menor extends Component {
         return (
             <React.Fragment>
                 
-                    <TitleText>¿¿ Cual es Menor ??</TitleText>
+                    
                     {
                          this.state.cantidad > 0 &&
                         <FormWrapper>
+                            <CenterCardResult>
+                            <TitleText>¿¿ Cual es Mayor ??</TitleText>
+                        <TitleText>Te quedan {this.state.vidas} Vidas</TitleText>
+                        </CenterCardResult>  
                     <CenterCard>
                         <TitleText>{this.state.valor1}</TitleText> 
                         <FormularioWrapper>

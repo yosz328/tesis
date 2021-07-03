@@ -27,7 +27,6 @@ const CenterCard = styled(Card)`
     background: rgba(55, 156, 200);
     border-style: groove;
 
-
 `;
 
 const CenterCardResult = styled(Card)`
@@ -39,8 +38,7 @@ const CenterCardResult = styled(Card)`
     min-height: 100px;
     background: rgba(55, 156, 200);
     border-style: groove;
-
-
+    margin-bottom: 10px
 `;
 
 const TitleText = styled.h2`
@@ -201,12 +199,16 @@ class Mayor extends Component {
         return (
             <React.Fragment>
                 
-                    <TitleText>¿¿ Cual es Mayor ??</TitleText>
+                    
                     {
                          this.state.cantidad > 0 &&
                         <FormWrapper>
-                            <TitleText>Te quedan {this.state.vidas} Vidas</TitleText>
+                            <CenterCardResult>
+                            <TitleText>¿¿ Cual es Mayor ??</TitleText>
+                        <TitleText>Te quedan {this.state.vidas} Vidas</TitleText>
+                        </CenterCardResult>   
                     <CenterCard>
+                        
                         <TitleText>{this.state.valor1}</TitleText> 
                         <FormularioWrapper>
                                 <TextField  id="outlined-basic"  variant="outlined" value={this.state.value} onChange={this.handleInput} disabled={this.state.correcta} />

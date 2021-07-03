@@ -84,6 +84,9 @@ class Home extends Component {
     }
     componentDidMount() {
         
+      if (localStorage.getItem('nombre_user')){
+          this.setState({nombre:localStorage.getItem('nombre_user'), correcto: true })
+      }
         /*getPreguntas()
             .then(result => {             
                 localStorage.setItem('preguntas',JSON.stringify(result.data.response))    
@@ -110,7 +113,10 @@ class Home extends Component {
         // Use textFieldInput
 
         if (this.state.textFieldInput != ''){
-            this.setState({correcto: true,nombre: this.state.textFieldInput})
+            this.setState({correcto: true,nombre: this.state.textFieldInput}, () =>{
+              localStorage.setItem('nombre_user',this.state.nombre)
+            })
+            
         }else{
             
         }
